@@ -32,7 +32,7 @@ loop do
   when '4'
     fill_values
     result = calc.divide(@number1, @number2)
-    if result.class == Integer
+    if result.is_a? Integer
       print "Resultado da divisao é = #{result}"
     else
       print result
@@ -42,7 +42,6 @@ loop do
   else
     print 'Opcão inválida! Por favor digite uma das opcões válida!'
   end
-  sleep 1.5
-  system 'clear'
+  calc.clean_screen
   break if option == '0'
 end

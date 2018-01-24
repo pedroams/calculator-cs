@@ -24,11 +24,11 @@ describe('Calculadora') do
       expect(@calc.subtract(130, 120)).to eql(10)
     end
     it('com números inteiros negativos') do
-      expect(@calc.subtract(-50, -80)).to eql(-130)
+      expect(@calc.subtract(-50, -80)).to eql(30)
     end
     it('com apenas um número inteiro negativo') do
       expect(@calc.subtract(-10, 35)).to eql(-45)
-      expect(@calc.subtract(12, -200)).to eql(-188)
+      expect(@calc.subtract(12, -200)).to eql(212)
     end
   end
 
@@ -63,6 +63,12 @@ describe('Calculadora') do
     end
     it('com divisor sendo um número inteiro negativo') do
       expect(@calc.divide(6, -2)).to eql(-3)
+    end
+  end
+
+  describe('Limpar tela') do
+    it('deve limpar') do
+      expect(@calc.clean_screen).to be(true)
     end
   end
 end
