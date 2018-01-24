@@ -67,7 +67,7 @@ describe('Calculadora') do
   end
 
   describe('Limpar tela') do
-    it('deve limpar') do
+    it('com sucesso') do
       expect(@calc.clean_screen).to be(true)
     end
   end
